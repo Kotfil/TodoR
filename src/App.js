@@ -9,14 +9,24 @@ import TodoListTasks from './TodoListTasks';
 
 class App extends React.Component {
     render = () => {
+        let tasks = [
+            {title: "JS", isDone: true},
+            {title: "CSS", isDone: true},
+            {title: "React", isDone: true},
+            {title: "SASS", isDone: false},
+            {title: "Phyton", isDone: false}
+        ]
+
         return (
             <div className="App"> 
             <div className="todoList">
                <TodoListHeader />
                <TodoListFooter />
-               <TodoListTasks />
+               <TodoListTasks tasks={tasks}/>
+
                   </div>
               </div>
+
         );
     }
 }
